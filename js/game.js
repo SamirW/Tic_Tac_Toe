@@ -78,7 +78,8 @@ function mouseClickEvent(e) {
 			playersImage.src = "images/player1.png";
 			play = 1;
 		} else {
-			bgImage.src = "images/bg.png"
+			bgImage.src = "images/bg.png";
+			playersImage.src = "images/noPlayers.png";
 			play = 0;
 		};
 	};
