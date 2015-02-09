@@ -12,6 +12,9 @@ bgAudio = new Audio("sounds/bg.mp3");
 bgAudio.loop = true;
 bgAudio.play();
 
+xAudio = new Audio("sounds/x.mp3");
+oAudio = new Audio("sounds/o.mp3");
+
 //Create canvas
 
 var canvas = document.getElementById("canvas");
@@ -121,10 +124,12 @@ function assignImage(newImage) {
 	var s = newImage - 1;
 	if (playValue[s] == 0) {
 		if (playerTurn == 1) {
+			xAudio.play();
 			playValue[s] = "x";
 			playersImage.src = "images/player2.png";
 			playerTurn = 2;
 		} else {
+			oAudio.play();
 			playValue[s] = "o";
 			playersImage.src = "images/player1.png";
 			playerTurn = 1;
