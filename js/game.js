@@ -6,6 +6,11 @@ var boxElements = [];
 var canvasElements = [];
 var playValue = [0,0,0,0,0,0,0,0,0];
 
+//Create sound variables
+
+bgAudio = new Audio("sounds/bg.mp3");
+bgAudio.loop = true;
+bgAudio.play();
 
 //Create canvas
 
