@@ -89,7 +89,6 @@ window.onload = function() {
 
 canvas.addEventListener("click", mouseClickEvent, false);
 
-
 function mouseClickEvent(e) {
 	var pos = convertClick(e);
 	// alert(pos.x + " " + pos.y);
@@ -195,6 +194,8 @@ function render() {
 	};
 }
 
+//Win/Draw Handling
+
 function checkWin() {
 	console.log(playValue);
 	if (playValue[0] == playValue[1] && playValue[0] == playValue[2] && playValue[0] != 0 ||
@@ -224,6 +225,8 @@ function drawGame() {
 	playersImage.src = "images/drawGame.png"
 	play = 2;
 }
+
+//
 
 function main() {
 	render();
