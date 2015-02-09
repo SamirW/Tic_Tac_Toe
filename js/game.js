@@ -59,7 +59,7 @@ bgImage.style.width = canvas.width;
 canvas.addEventListener("click", mouseClickEvent, false);
 
 function mouseClickEvent(e) {
-	var hotspots = [[0.05520833333, 0.444791667, 0.78148148148, 0.92407407407], [1]]
+	var hotspots = [[0.05520833333, 0.444791667, 0.78148148148, 0.92407407407], [2]]
 	var pos = convertClick(e);
 
 	if (pos.x > hotspots[0][0] && pos.x < hotspots[0][1] && pos.y > hotspots[0][2] && pos.y < hotspots[0][3]) {
