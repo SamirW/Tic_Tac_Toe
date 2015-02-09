@@ -10,4 +10,6 @@ The only elements that are not mine are the sound files from OpenGameArt.com:
     
 The game is built solely with JS, utilizing Canvas. It also automatically resizes to the browser, so it can be better played on any device.
 
+Play it <a href = "http://samirw.github.io/Tic_Tac_Toe">here!</a>
+
 Enjoy!
