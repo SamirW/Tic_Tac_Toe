@@ -114,15 +114,17 @@ function mouseClickEvent(e) {
 
 function assignImage(newImage) {
 	var s = newImage - 1;
-	if (playerTurn == 1) {
-		playValue[s] = "x";
-		playersImage.src = "images/player2.png";
-		playerTurn = 2;
-	} else {
-		playValue[s] = "o";
-		playersImage.src = "images/player1.png";
-		playerTurn = 1;
-	};
+	if (playValue[s] == 0) {
+		if (playerTurn == 1) {
+			playValue[s] = "x";
+			playersImage.src = "images/player2.png";
+			playerTurn = 2;
+		} else {
+			playValue[s] = "o";
+			playersImage.src = "images/player1.png";
+			playerTurn = 1;
+		};
+	}
 }
 
 //Get click location
@@ -194,11 +196,23 @@ function checkWin() {
 		playValue[3] == playValue[4] && playValue[3] == playValue[5] && playValue[3] != 0 ||
 		playValue[6] == playValue[7] && playValue[6] == playValue[8] && playValue[6] != 0) {
 		winGame();
+	} else if (playValue.indexOf(0) == -1) {
+		drawGame();
 	}
 }
 
 function winGame() {
-	console.log("winner");
+	if (playerTurn == 1) {
+		playersImage.src = "images/win2.png"
+	} else {
+		playersImage.src = "images/win1.png"
+	}
+	play = 2;
+}
+
+function drawGame() {
+	playersImage.src = "images/drawGame.png"
+	play = 2;
 }
 
 function main() {
