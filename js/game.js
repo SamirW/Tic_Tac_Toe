@@ -103,6 +103,9 @@ function render() {
 	if (bgReady) {
 		ctx.drawImage(bgImage, 0, 0, canvas.width, canvas.height);
 	};
+	if (playersReady) {
+		ctx.drawImage(playersImage, 0, 0, canvas.width, canvas.height);
+	};
 }
 
 var main = function () {
