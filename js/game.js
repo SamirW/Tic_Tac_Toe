@@ -1,5 +1,6 @@
 //Event modes
 var play = 0;
+var playerTurn = 1;
 
 //Create canvas
 
@@ -48,6 +49,15 @@ bgImage.src = "images/bg.png";
 bgImage.style.height = canvas.height;
 bgImage.style.width = canvas.width;
 
+var playersReady = false;
+var playersImage = new Image();
+playersImage.onload = function() {
+	playersReady = true;
+};
+playersImage.src = "images/noPlayers.png";
+playersImage.style.height = canvas.height;
+playersImage.style.weight = canvas.weight;
+
 // var boxReady = false;
 // var boxImage = new Image();
 // boxImage.onload = function() {
@@ -65,6 +75,7 @@ function mouseClickEvent(e) {
 	if (pos.x > hotspots[0][0] && pos.x < hotspots[0][1] && pos.y > hotspots[0][2] && pos.y < hotspots[0][3]) {
 		if (play == 0) {
 			bgImage.src = "images/bgPlayGame.png";
+			playersImage.src = "images/player1.png";
 			play = 1;
 		} else {
 			bgImage.src = "images/bg.png"
