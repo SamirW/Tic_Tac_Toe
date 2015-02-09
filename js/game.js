@@ -71,7 +71,7 @@ canvas.addEventListener("click", mouseClickEvent, false);
 
 function mouseClickEvent(e) {
 	var pos = convertClick(e);
-	alert(pos.x + " " + pos.y);
+	// alert(pos.x + " " + pos.y);
 
 	if (pos.x > hotspots[0][0] && pos.x < hotspots[0][1] && pos.y > hotspots[0][2] && pos.y < hotspots[0][3]) {
 		if (play == 0) {
